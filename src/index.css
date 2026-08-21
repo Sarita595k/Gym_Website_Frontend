@@ -1,1 +1,7 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@theme {
+    --font-heading: "Oswald", sans-serif;
+    --font-para: "Playfair Display", serif;
+    --font-subHeading: "Elsie", serif;
+}
