@@ -3,9 +3,9 @@ import bgImage from "../../assets/Equipments/bg-image.png"
 import ServiceTable from './ServiceTable'
 const Services = () => {
     return (
-        <div className='bg-no-repeat bg-cover' style={{ backgroundImage: `url(${bgImage})` }}>
+        <div className='mt-10 bg-no-repeat bg-cover' style={{ backgroundImage: `url(${bgImage})` }}>
             {/* <div> */}
-            <div>
+            <div className='mb-10'>
                 <Heading heading="Push Your Limits. Elevate Your Game."
                     subHeading="What We Offer" paragraph="Explore training 
                 options tailored to your lifestyle. We offer modern strength

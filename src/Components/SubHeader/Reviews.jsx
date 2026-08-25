@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 export const testimonials = [
     {
         id: 1,
@@ -51,18 +53,27 @@ export const testimonials = [
     }
 ];
 const Reviews = () => {
-    return (
-        <div className="w-full text-center m-auto">
-            {testimonials.map((client, index) => (
-                <div key={index} className="flex flex-col items-center">
-                    <img src={client.avatar} alt="client" className="rounded-[50%] h-32 w-32 shadow-2xl" />
-                    <p>{client.name}</p>
-                    <h5 className="m-5 w-full">{client.quote}</h5>
-                    {/* <p>{client.rating}</p> */}
-                    <h6 >{client.serviceUsed}</h6>
-                    <h6>{client.membershipDuration}</h6>
+    const [currIndex, setCurrIndex] = useState(0)
 
-                </div>))}
+    useEffect(() => {
+        const slider = setInterval(() => {
+            setCurrIndex(prevIndex => (prevIndex + 1) % testimonials.length)
+        }, 4000);
+
+        return (() => clearInterval(slider))
+    }, [])
+
+    const client = testimonials[currIndex]
+    return (
+        <div className="w-full text-center m-auto shadow-xl shadow-gray-200 p-10">
+            <div className="flex flex-col items-center">
+                <img src={client.avatar} alt="client" className="rounded-[50%] h-32 w-32 shadow-2xl" />
+                <p className="font-subHeading text-gray-600 pt-4">{client.name}</p>
+                <h5 className="m-5 w-full font-para text-gray-500 lg:w-[50%]">{client.quote}</h5>
+                {/* <p>{client.rating}</p> */}
+                <h6 className="font-para text-gray-600 text-sm">{client.membershipDuration}</h6>
+                <h6 className="font-para text-gray-600 text-sm" >{client.serviceUsed}</h6>
+            </div>
         </div>
     )
 }
