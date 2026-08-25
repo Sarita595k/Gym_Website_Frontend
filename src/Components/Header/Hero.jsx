@@ -25,12 +25,12 @@ const Hero = () => {
     return (
         <div className="relative">
             <div className="relative w-full h-full">
-                <img src={slides[index]} alt="slides" className="w-full h-full object-full opacity-90" />
+                <img src={slides[index]} alt="slides" className="w-full h-full object-cover opacity-90" />
             </div>
             <div className="absolute top-1/2 left-1/2 
-            -translate-x-1/2 -translate-y-1/2 z-10 text-center whitespace-nowrap p-2">
-                <h1 className="bg-black text-5xl font-bold text-gray-300">The Fastest Path to a Stronger You.</h1>
-                <h3 className="bg-gray-300 text-2xl mt-2">Stop Waiting. Start Winning.</h3>
+            -translate-x-1/2 -translate-y-1/2 text-center whitespace-nowrap p-2">
+                <h1 className="bg-black text-2xl p-2 font-bold text-gray-300 md:text-3xl lg:text-5xl">The Fastest Path to a Stronger You.</h1>
+                <h3 className="bg-gray-300 text-sm mt-2 md:text-2xl lg:text-2xl">Stop Waiting. Start Winning.</h3>
             </div>
         </div>
     )

@@ -2,7 +2,7 @@ import Heading from './Heading'
 
 const WhyChoose = () => {
     return (
-        <div className='m-22'>
+        <div>
             <Heading heading="Why choose us?" subHeading="Built for Every Fitness Journey" paragraph="At Avsar Gym, we are more than just a place to workout;
                 we are your ultimate opportunity to unlock your full potential.
                 With state-of-the-art facilities, expert personal trainers dedicated
