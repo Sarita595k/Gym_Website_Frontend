@@ -65,11 +65,11 @@ const Reviews = () => {
 
     const client = testimonials[currIndex]
     return (
-        <div className="w-full text-center m-auto shadow-xl shadow-gray-200 p-10">
+        <div className="w-full text-center m-auto shadow-md shadow-emerald-800 p-10">
             <div className="flex flex-col items-center">
-                <img src={client.avatar} alt="client" className="rounded-[50%] h-32 w-32 shadow-2xl" />
-                <p className="font-subHeading text-gray-600 pt-4">{client.name}</p>
-                <h5 className="m-5 w-full font-para text-gray-500 lg:w-[50%]">{client.quote}</h5>
+                <img src={client.avatar} alt="client" className="rounded-[50%] h-32 w-32 shadow-lg shadow-emerald-900" />
+                <p className="font-subHeading text-emerald-900 pt-4">{client.name}</p>
+                <h5 className="m-5 w-full font-para text-emerald-800 lg:w-[50%]">{client.quote}</h5>
                 {/* <p>{client.rating}</p> */}
                 <h6 className="font-para text-gray-600 text-sm">{client.membershipDuration}</h6>
                 <h6 className="font-para text-gray-600 text-sm" >{client.serviceUsed}</h6>
