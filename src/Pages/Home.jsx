@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from '../Components/Header/Hero'
 import WhyChoose from '../Components/SubHeader/WhyChoose'
 import Services from '../Components/SubHeader/Services'
@@ -7,6 +6,7 @@ import Pricing from '../Components/SubHeader/Pricing'
 import Trainer from '../Components/SubHeader/Trainer'
 import Faqs from '../Components/SubHeader/Faqs'
 import Footer from '../Components/Footer/Footer'
+import News from '../Components/SubHeader/News'
 
 const Home = () => {
     return (
@@ -18,6 +18,7 @@ const Home = () => {
             <Pricing />
             <Trainer />
             <Faqs />
+            <News />
             <Footer />
         </div>
     )

@@ -24,11 +24,11 @@ const PriceCard = () => {
     return (
         <div className="flex flex-col lg:flex-row md:flex-row items-center">
             {priceDetails.map((details, index) => (
-                <div key={index} className=" border-emerald-700 w-[50%] text-center my-4 lg:mx-2 shadow-md border-t shadow-emerald-900">
-                    <h1 className="font-heading text-xl lg:text-2xl uppercase py-4 border-b">{details.type}</h1>
-                    <h2 className="py-2 text-sm font-subheading capitalize px-3 lg:py-4 lg:text-lg border-b">{details.ideal}</h2>
-                    <h2 className="py-2 text-sm font-subheading capitalize px-3 lg:py-4 lg:text-lg border-b">{details.access}</h2>
-                    <h2 className="py-2 text-sm font-subheading capitalize px-3 lg:py-4 lg:text-lg border-b">{details.price}</h2>
+                <div key={index} className="bg-emerald-50 w-[50%] text-center my-4 lg:mx-2 shadow-md border-t border-emerald-100 shadow-emerald-900 ">
+                    <h1 className="font-heading text-xl lg:text-2xl uppercase py-4 border-b border-emerald-400 text-emerald-900">{details.type}</h1>
+                    <h2 className="py-2 text-sm font-subheading capitalize px-3 lg:py-4 lg:text-lg border-b text-gray-700 border-emerald-400">{details.ideal}</h2>
+                    <h2 className="py-2 text-sm font-subheading capitalize px-3 lg:py-4 lg:text-lg border-b text-gray-700 border-emerald-400">{details.access}</h2>
+                    <h2 className="py-2 text-sm font-subheading capitalize px-3 lg:py-4 lg:text-lg border-b text-gray-700 border-emerald-400">{details.price}</h2>
                     <button className="py-3 bg-emerald-700 text-gray-200 px-4 capitalize hover:text-emerald-800 hover:bg-white"><a href="#">purchase now</a></button>
                 </div>
             ))}
