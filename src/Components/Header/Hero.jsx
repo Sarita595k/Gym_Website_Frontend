@@ -28,8 +28,11 @@ const Hero = ({ heading, subheading }) => {
             <div className="relative w-full h-full">
                 <img src={slides[index]} alt="slides" className="w-full h-full object-cover opacity-75" />
             </div>
-            <div className="absolute inset-0 bg-emerald-900/50"></div>
-            <HeaderHeading heading="The Fastest Path to a Stronger You." subheading="Stop Waiting. Start Winning." />
+            <div className="absolute inset-0 bg-emerald-900/50 mix-blend-multiply pointer-events-none"></div>
+            <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
+                <HeaderHeading heading="The Fastest Path to a Stronger You." subheading="Stop Waiting. Start Winning." />
+            </div>
+
         </div>
     )
 }

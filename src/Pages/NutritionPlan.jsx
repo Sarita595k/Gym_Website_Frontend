@@ -1,8 +1,12 @@
-import NutritionHero from "../Components/Header/NutritionHero"
+import NutritionHero from "../Components/NutritionPage/NutritionHero"
+import WhatToEat from "../Components/NutritionPage/WhatToEat"
 
 const NutritionPlan = () => {
     return (
-        <div><NutritionHero /></div>
+        <div>
+            <NutritionHero />
+            <WhatToEat />
+        </div>
     )
 }
 
