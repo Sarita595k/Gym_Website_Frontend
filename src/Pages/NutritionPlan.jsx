@@ -1,9 +1,8 @@
-import React from 'react'
-import SecondHero from '../Components/Header/SecondHero'
+import NutritionHero from "../Components/Header/NutritionHero"
 
 const NutritionPlan = () => {
     return (
-        <div><SecondHero /></div>
+        <div><NutritionHero /></div>
     )
 }
 
