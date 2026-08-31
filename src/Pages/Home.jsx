@@ -5,7 +5,6 @@ import Testimonials from '../Components/SubHeader/Testimonials'
 import Pricing from '../Components/SubHeader/Pricing'
 import Trainer from '../Components/SubHeader/Trainer'
 import Faqs from '../Components/SubHeader/Faqs'
-import Footer from '../Components/Footer/Footer'
 import News from '../Components/SubHeader/News'
 
 const Home = () => {
@@ -19,7 +18,6 @@ const Home = () => {
             <Trainer />
             <Faqs />
             <News />
-            <Footer />
         </div>
     )
 }

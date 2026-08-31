@@ -4,10 +4,11 @@ import slide5 from "../../assets/Hero/slide2.png"
 import slide3 from "../../assets/Hero/slide3.png"
 import slide4 from "../../assets/Hero/slide4.png"
 import slide2 from "../../assets/Hero/slide5.png"
+import HeaderHeading from "./HeaderHeading"
 
 const slides = [slide1, slide2, slide3, slide4, slide5]
 
-const Hero = () => {
+const Hero = ({ heading, subheading }) => {
     const [index, setIndex] = useState(0)
 
     useEffect(() => {
@@ -25,13 +26,10 @@ const Hero = () => {
     return (
         <div className="relative">
             <div className="relative w-full h-full">
-                <img src={slides[index]} alt="slides" className="w-full h-full object-cover opacity-90" />
+                <img src={slides[index]} alt="slides" className="w-full h-full object-cover opacity-75" />
             </div>
-            <div className="absolute top-1/2 left-1/2 
-            -translate-x-1/2 -translate-y-1/2 text-center whitespace-nowrap p-2">
-                <h1 className="bg-black text-2xl p-2 font-bold text-gray-300 md:text-3xl lg:text-5xl">The Fastest Path to a Stronger You.</h1>
-                <h3 className="bg-gray-300 text-sm mt-2 md:text-2xl lg:text-2xl">Stop Waiting. Start Winning.</h3>
-            </div>
+            <div className="absolute inset-0 bg-emerald-900/50"></div>
+            <HeaderHeading heading="The Fastest Path to a Stronger You." subheading="Stop Waiting. Start Winning." />
         </div>
     )
 }

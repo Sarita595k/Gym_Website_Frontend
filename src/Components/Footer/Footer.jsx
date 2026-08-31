@@ -41,7 +41,7 @@ const Footer = () => {
                 </div>
                 <div className="my-5">
                     <h1 className="text-xl capitalize text-emerald-900 font-subHeading">address :</h1>
-                    <address className="capitalize text-gray-800">71, canal street, new york, NY</address>
+                    <address className="capitalize text-gray-800">71, canal street, Bangalore, IN</address>
                     <p className="capitalize text-gray-800">tel:+123456789</p>
                     <p className="capitalize text-gray-800">fax:+123456789</p>
                     <p className="text-gray-800">Email: support@avsargym.com</p>
