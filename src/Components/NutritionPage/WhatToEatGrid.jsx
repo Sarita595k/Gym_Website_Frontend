@@ -48,14 +48,14 @@ const WhatToEatGrid = () => {
                     <video autoPlay loop playsInline muted className="rounded-xl">
                         <source src={diet.video} type="video/mp4" />
                     </video>
-                    <h1 className="text-2xl text-center uppercase font-heading text-emerald-800 py-5">{diet.type}</h1>
-                    <h2 className="font-para text-lg px-4 tracking-normal capitalize text-emerald-800">✅ fuel (what to include)
-                        <p className="text-sm pt-2 text-gray-700">{diet.fuel}</p></h2>
-                    <h2 className="font-para text-lg px-4 tracking-normal capitalize text-emerald-800 py-5">❌ Drain (What to Avoid or Limit)
-                        <p className="text-sm pt-2 text-gray-700">{diet.fuel}</p>
+                    <h1 className="text-xl text-center uppercase font-heading text-emerald-800 py-3">{diet.type}</h1>
+                    <h2 className="font-para text-sm font-semibold px-4 tracking-wide capitalize text-emerald-800">✅ fuel (what to include)
+                        <p className="text-sm pt-2 font-light text-gray-700">{diet.fuel}</p></h2>
+                    <h2 className="font-para text-sm font-semibold px-4 tracking-wide capitalize text-emerald-800 py-4">❌ Drain (What to Avoid or Limit)
+                        <p className="text-sm pt-2 font-light text-gray-700">{diet.fuel}</p>
                     </h2>
-                    <h2 className="font-para text-lg px-4 tracking-normal capitalize text-emerald-800 py-2">Why the Swap Matters
-                        <p className="text-sm pt-2 text-gray-700">{diet.swap}</p>
+                    <h2 className="font-para text-sm font-semibold px-4 tracking-wide capitalize text-emerald-800 py-2">Why the Swap Matters
+                        <p className="text-sm pt-2 font-light text-gray-700 pb-2">{diet.swap}</p>
                     </h2>
                 </div>
             ))
