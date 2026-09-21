@@ -1,6 +1,9 @@
-import React from 'react'
+import { useState } from "react"
 
 const RecipeForm = () => {
+    const [details, setDetails] = useState({
+
+    })
     return (
         <div>
             <h1 className='font-para pt-10 pb-5 text-center capitalize text-lg text-shadow-lg text-gray-700'>fill the form to get your recipe ready</h1>
