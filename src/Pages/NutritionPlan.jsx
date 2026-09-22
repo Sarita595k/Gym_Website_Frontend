@@ -1,7 +1,8 @@
 import AiNutrition from "../Components/NutritionPage/AiNutrition"
 import NutritionHero from "../Components/NutritionPage/NutritionHero"
 import { PantrySwap } from "../Components/NutritionPage/PantrySwap"
-import Recipe from "../Components/NutritionPage/Recipe"
+import RecipeHeading from "../Components/NutritionPage/RecipeHeading"
+// import Recipe from "../Components/NutritionPage/RecipeHeading"
 import WhatToEat from "../Components/NutritionPage/WhatToEat"
 
 const NutritionPlan = () => {
@@ -11,7 +12,7 @@ const NutritionPlan = () => {
             <AiNutrition />
             <WhatToEat />
             <PantrySwap />
-            <Recipe />
+            <RecipeHeading />
         </div>
     )
 }
