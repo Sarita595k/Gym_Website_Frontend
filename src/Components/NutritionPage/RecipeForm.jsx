@@ -55,7 +55,7 @@ const RecipeForm = () => {
             <h1 className="text-[#006045] capitalize text-center font-semibold">
                 avsar gym - nutrition AI</h1>
             <h1 className="text-2xl text-[#006045] font-semibold font-subHeading pt-4">
-                generate your custom meal plan</h1>
+                generate your custom AI-meal plan</h1>
             <p className="text-sm">customize your fitness goal,
                 dietery preferences and daily target calories</p>
             {/* <h1 className='font-para pt-10 pb-5 text-center capitalize text-lg text-shadow-lg text-gray-700'>fill the form to get your recipe ready</h1> */}
