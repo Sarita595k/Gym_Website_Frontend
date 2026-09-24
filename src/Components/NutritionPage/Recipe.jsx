@@ -5,7 +5,6 @@ const RecipeCard = ({ recipeIs, index }) => {
     const [showFullInstructions, setShowFullInstructions] = useState(false)
 
     const instructions = recipeIs.instructions || []
-    // Preview the first 2 steps when collapsed
     const previewLimit = 2
     const hasMore = instructions.length > previewLimit
     const displayedInstructions = showFullInstructions ? instructions : instructions.slice(0, previewLimit)

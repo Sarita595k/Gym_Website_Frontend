@@ -53,7 +53,8 @@ const WhatToEatGrid = () => {
             {dietDetails.map((diet) => (
                 <div
                     key={diet.id}
-                    className="w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] text-center shadow-lg shadow-emerald-950/40 rounded-xl overflow-hidden bg-white border border-emerald-100 flex flex-col justify-between p-4"
+                    className="w-full md:w-[calc(50%-1.5rem)]  lg:w-[calc(33.333%-1.5rem)] text-center shadow-lg shadow-emerald-950/40 rounded-xl overflow-hidden
+                     bg-black border border-emerald-100 flex flex-col justify-between p-4"
                 >
                     {/* Video Container */}
                     <div className="w-full h-48 overflow-hidden rounded-lg bg-black">
@@ -68,17 +69,17 @@ const WhatToEatGrid = () => {
                         </video>
                     </div>
 
-                    <h2 className="text-xl uppercase font-heading font-bold text-emerald-800 py-3">
+                    <h2 className="text-xl uppercase font-heading font-semibold text-emerald-300 py-3">
                         {diet.type}
                     </h2>
 
                     <div className="flex-1 flex flex-col justify-between gap-4 text-left px-2 pb-2">
                         {/* Fuel Section */}
                         <div>
-                            <h3 className="font-para text-sm font-semibold tracking-wide capitalize text-emerald-700">
+                            <h3 className="font-para text-sm font-semibold tracking-wide capitalize text-emerald-500">
                                 ✅ Fuel (What to Include)
                             </h3>
-                            <p className="text-sm pt-1 font-normal text-gray-700 leading-relaxed">
+                            <p className="text-sm pt-1 font-normal text-gray-200 leading-relaxed">
                                 {diet.fuel}
                             </p>
                         </div>
@@ -88,17 +89,17 @@ const WhatToEatGrid = () => {
                             <h3 className="font-para text-sm font-semibold tracking-wide capitalize text-rose-700">
                                 ❌ Drain (What to Avoid or Limit)
                             </h3>
-                            <p className="text-sm pt-1 font-normal text-gray-700 leading-relaxed">
+                            <p className="text-sm pt-1 font-normal text-gray-200 leading-relaxed">
                                 {diet.drain}
                             </p>
                         </div>
 
                         {/* Swap Section */}
                         <div className="pt-2 border-t border-gray-100">
-                            <h3 className="font-para text-sm font-semibold tracking-wide capitalize text-emerald-900">
+                            <h3 className="font-para text-sm font-semibold tracking-wide capitalize text-emerald-400">
                                 💡 Why the Swap Matters
                             </h3>
-                            <p className="text-sm pt-1 italic font-light text-gray-600 leading-relaxed">
+                            <p className="text-sm pt-1 italic font-light text-gray-300 leading-relaxed">
                                 {diet.swap}
                             </p>
                         </div>

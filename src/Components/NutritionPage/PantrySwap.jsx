@@ -3,7 +3,7 @@ import Swap from './Swap'
 
 export const PantrySwap = () => {
     return (
-        <div>
+        <div className='bg-emerald-50 mb-10 shadow-lg shadow-emerald-400 border-t border-b border-emerald-800'>
             <Heading heading="Smart Pantry Swaps for the Indian Kitchen" subHeading="Simple Daily Substitutions.
          Double the Protein. Zero Starvation."
                 paragraph="Transforming your physique does not require

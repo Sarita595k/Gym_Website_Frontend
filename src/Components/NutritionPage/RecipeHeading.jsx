@@ -13,7 +13,7 @@ const RecipeHeading = () => {
                   everyday Indian staples like paneer, soya chunks, eggs, and
                    sprouts—delivering optimal macros, unbeatable flavor, and
                     under-20-minute cook times." />
-            <RecipeForm />
+            {/* <RecipeForm /> */}
         </div>
     )
 }

@@ -12,7 +12,7 @@ const NutritionPlan = () => {
             <AiNutrition />
             <WhatToEat />
             <PantrySwap />
-            <RecipeHeading />
+            {/* <RecipeHeading /> */}
         </div>
     )
 }
