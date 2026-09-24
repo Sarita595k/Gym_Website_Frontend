@@ -1,7 +1,7 @@
 const VideoComp = ({ videoIs }) => {
     return (
         <div className="relative">
-            <div className="w-full h-full overflow-hidden ">
+            <div className="w-full h-full overflow-hidden">
                 <video autoPlay muted loop playsInline className="w-full">
                     <source src={videoIs} type="video/mp4" />
                 </video>

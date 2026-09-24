@@ -65,14 +65,14 @@ const Reviews = () => {
 
     const client = testimonials[currIndex]
     return (
-        <div className="w-full text-center m-auto shadow-md shadow-emerald-800 p-10">
-            <div className="flex flex-col items-center">
-                <img src={client.avatar} alt="client" className="rounded-[50%] h-32 w-32 shadow-lg shadow-emerald-900" />
-                <p className="font-subHeading text-emerald-900 pt-4">{client.name}</p>
-                <h5 className="m-5 w-full font-para text-emerald-800 lg:w-[50%]">{client.quote}</h5>
+        <div className="w-full m-auto p-10 text-center text-white rounded-lg shadow-md shadow-emerald-800/50 bg-[radial-gradient(at_top_left,#065f46,#000,#000)]">
+            <div className="flex flex-col items-center py-10">
+                <img src={client.avatar} alt="client" className="rounded-[50%] h-36 w-40 shadow-lg shadow-emerald-900" />
+                <p className="font-subHeading text-emerald-100 pt-4">{client.name}</p>
+                <h5 className="m-5 w-full font-para text-emerald-200 lg:w-[50%]">{client.quote}</h5>
                 {/* <p>{client.rating}</p> */}
-                <h6 className="font-para text-gray-600 text-sm">{client.membershipDuration}</h6>
-                <h6 className="font-para text-gray-600 text-sm" >{client.serviceUsed}</h6>
+                <h6 className="font-para text-gray-100 text-sm">{client.membershipDuration}</h6>
+                <h6 className="font-para text-gray-200 text-sm" >{client.serviceUsed}</h6>
             </div>
         </div>
     )

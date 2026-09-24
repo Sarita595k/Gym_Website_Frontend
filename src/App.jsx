@@ -10,7 +10,7 @@ import Dashboard from './Pages/Dashboard'
 import Register from './Pages/Register'
 const App = () => {
   return (
-    <div>
+    <div className='bg-emerald-50'>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />}>Home</Route>

@@ -3,7 +3,11 @@ import bgImage from "../../assets/Equipments/bg-image.png"
 import ServiceTable from './ServiceTable'
 const Services = () => {
     return (
-        <div className='mt-10 bg-no-repeat bg-cover' style={{ backgroundImage: `url(${bgImage})` }}>
+        <div className='mt-10 bg-no-repeat bg-cover'
+        // style={{
+        //     backgroundImage: `url(${bgImage})`
+        // }}
+        >
             {/* <div> */}
             <div className='mb-10'>
                 <Heading heading="Push Your Limits. Elevate Your Game."

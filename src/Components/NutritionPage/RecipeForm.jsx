@@ -4,7 +4,7 @@ import { styled } from "styled-components"
 import Loading from "../../assets/Nutrition/Loading.mp4"
 import Load from "../../assets/Nutrition/Load.gif"
 const Label = styled.label`
-color:#006045;
+// color:#006045;
 font-weight:500;
 display:block;
 `
@@ -53,16 +53,16 @@ const RecipeForm = () => {
     return (
         <>
             <div className="pt-10 capitalize md:w-[50%] m-auto text-center flex flex-col items-center shadow-2xl shadow-emerald-800 my-5
-            hover:scale-105 transition-transform duration-300 ease-in">
-                <h1 className="text-[#006045] capitalize text-center font-semibold">
+            hover:scale-105 transition-transform duration-300 ease-in bg-[radial-gradient(at_top_left,#065f46,#000,#000)]">
+                <h1 className="text-emerald-200 capitalize text-center font-semibold">
                     avsar gym - nutrition AI</h1>
-                <h1 className="text-2xl text-[#006045] font-semibold font-subHeading pt-4">
+                <h1 className="text-2xl text-gray-100 font-semibold font-subHeading pt-4">
                     generate your custom AI-meal plan</h1>
-                <p className="text-sm">customize your fitness goal,
+                <p className="text-sm text-gray-500">customize your fitness goal,
                     dietery preferences and daily target calories</p>
                 {/* <h1 className='font-para pt-10 pb-5 text-center capitalize text-lg text-shadow-lg text-gray-700'>fill the form to get your recipe ready</h1> */}
                 {errorMessage && (
-                    <p className="text-red-600 bg-red-100 border border-red-400 px-4 py-2 rounded mb-4 text-center font-medium capitalize">
+                    <p className="text-red-600 bg-red-100 border border-red-400 px-4 py-2 my-4 rounded mb-4 text-center font-medium capitalize">
                         {errorMessage}
                     </p>
                 )}
@@ -70,16 +70,16 @@ const RecipeForm = () => {
                 <form onSubmit={handleSubmit} className="pt-10">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
                         {/* <div className="flex flex-row"> */}
-                        <div className="flex flex-col">
-                            <Label htmlFor='goalIs'>fitness goal</Label>
+                        <div className="flex flex-col text-white">
+                            <Label htmlFor='goalIs' className="text-emerald-500">fitness goal</Label>
                             <select name="goal" id="goalIs" className='border rounded-sm px-2 py-1' value={details.goal} onChange={handleChange}>
                                 <option value="fat_loss" className="capitalize">Fat loss</option>
                                 <option value="muscle_gain" className="capitalize">muscle gain</option>
                                 <option value="maintenance" className="capitalize">maintenance</option>
                             </select>
                         </div>
-                        <div className="flex flex-col">
-                            <Label htmlFor='dietIs' className="">diet type</Label>
+                        <div className="flex flex-col text-white">
+                            <Label htmlFor='dietIs' className="text-emerald-500">diet type</Label>
                             <select name="dietType" id="dietIs" className='border rounded-sm px-2 py-1' value={details.dietType} onChange={handleChange}>
                                 <option value="vegetarian" className="capitalize">vegetarian</option>
                                 <option value="non_vegetarian" className="capitalize">non-vegetarian</option>
@@ -90,14 +90,14 @@ const RecipeForm = () => {
                         {/* </div> */}
 
                         {/* <div className="flex flex-row"> */}
-                        <div className="flex flex-col">
-                            <Label htmlFor="targetCalorie">Target Calories(kcal)</Label>
+                        <div className="flex flex-col text-white">
+                            <Label htmlFor="targetCalorie" className="text-emerald-500">Target Calories(kcal)</Label>
                             <input type="text" name="targetCalories" id="targetCalorie"
                                 value={details.targetCalories} onChange={handleChange}
                                 className="border rounded-sm px-2 py-1" />
                         </div>
-                        <div className="flex flex-col">
-                            <Label htmlFor='mealTypeIs'>meal category</Label>
+                        <div className="flex flex-col text-white">
+                            <Label htmlFor='mealTypeIs' className="text-emerald-500">meal category</Label>
                             <select name="mealType" id="mealTypeIs" className='border rounded-sm px-2 py-1'
                                 value={details.mealType} onChange={handleChange}>
                                 <option value="breakfast" className="capitalize">breakfast</option>
@@ -110,7 +110,7 @@ const RecipeForm = () => {
                         {/* </div> */}
                     </div>
                     <button type="submit" className="cursor-pointer bg-emerald-700 font-para px-5 py-2
-                     text-white font-semibold capitalize my-10 hover:scale-105 transition-transform duration-300 ease-in-out">generate meal plan</button>
+                     text-white font-semibold capitalize my-10 hover:bg-[radial-gradient(at_top_left,#065f46,#000,#000)] transition-colors hover:scale-105 transition-transform duration-300 ease-in-out">generate meal plan</button>
                 </form>
             </div>
             {loading &&

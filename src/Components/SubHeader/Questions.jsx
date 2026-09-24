@@ -51,7 +51,7 @@ const Questions = () => {
     }
 
     return (
-        <div className="mx-auto mt-10 px-2 space-y-3">
+        <div className="mx-auto mt-10 px-2 space-y-3 bg-[radial-gradient(at_top_left,#065f46,#000,#000)]">
             {questionsList.map((question) => {
                 const isOpen = openId === question.id;
 
@@ -70,13 +70,12 @@ const Questions = () => {
                                 type="button"
                                 className="font-bold text-2xl text-emerald-200 hover:text-white"
                                 onClick={(e) => {
-                                    e.stopPropagation(); // Prevents duplicate triggers if clicking the button specifically
+                                    e.stopPropagation();
                                     handleClick(question.id);
                                 }}>
                                 {isOpen ? "−" : "+"}
                             </button>
                         </div>
-
                         {isOpen && (
                             <div className="bg-emerald-50 text-gray-800 p-4 border-t border-emerald-700/20">
                                 <p className="font-para text-sm md:text-base leading-relaxed">

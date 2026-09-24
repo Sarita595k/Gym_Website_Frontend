@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-
+import loginBanner from "../../assets/Login/loginBanner.mp4"
 const LoginForm = () => {
     const navigate = useNavigate()
     const [details, setDetails] = useState({
@@ -42,7 +42,7 @@ const LoginForm = () => {
 
 
     return (
-        <>
+        <div className=''>
             <div className='border h-[45vw] p-10'>
                 <h1 className='text-emerald-900 font-bold capitalize text-2xl'>enter your credentials</h1>
                 <p className='text-xs sm:text-sm text-gray-500 mt-1'>Welcome back. Enter your email and password to access your dashboard.</p>
@@ -57,7 +57,12 @@ const LoginForm = () => {
                 </form>
                 <p>not joined our gym yet! no worries just click on <Link to="/register">sign up</Link> to joined our gym.</p>
             </div>
-        </>
+            <div>
+                <video autoPlay playsInline muted loop>
+                    <source src={loginBanner} type="video/mp4" />
+                </video>
+            </div>
+        </div>
     )
 }
 

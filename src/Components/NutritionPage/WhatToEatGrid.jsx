@@ -54,7 +54,7 @@ const WhatToEatGrid = () => {
                 <div
                     key={diet.id}
                     className="w-full md:w-[calc(50%-1.5rem)]  lg:w-[calc(33.333%-1.5rem)] text-center shadow-lg shadow-emerald-950/40 rounded-xl overflow-hidden
-                     bg-black border border-emerald-100 flex flex-col justify-between p-4"
+                     bg-[radial-gradient(at_bottom_left,#065f46,#000,#000)] border border-emerald-100 flex flex-col justify-between p-4"
                 >
                     {/* Video Container */}
                     <div className="w-full h-48 overflow-hidden rounded-lg bg-black">

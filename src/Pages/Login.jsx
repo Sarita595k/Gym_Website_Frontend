@@ -7,7 +7,7 @@ import LoginForm from "../Components/Login/LoginForm"
 const Login = () => {
     return (
         <>
-            <LoginBanner />
+            {/* <LoginBanner /> */}
             <LoginComp />
             <LoginForm />
         </>

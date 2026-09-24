@@ -25,7 +25,7 @@ const Hero = ({ heading, subheading }) => {
     }, [])
     return (
         <div className="relative">
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-full bg-[radial-gradient(at_top_left,#065f46,#000,#000)]">
                 <img src={slides[index]} alt="slides" className="w-full h-full object-cover opacity-75" />
             </div>
             <div className="absolute inset-0 bg-emerald-900/50 mix-blend-multiply pointer-events-none"></div>
