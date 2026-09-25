@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import Logo from "../../assets/logo-bg.png"
 const Navbar = () => {
     return (
+        // navbar started here 
         <div className="flex flex-col bg-emerald-50">
             <img src={Logo} alt="logo" className="w-40 h-30 m-auto " />
             <div className='flex justify-between bg-[radial-gradient(at_top_left,#065f46,#000,#000)] text-white p-3'>
