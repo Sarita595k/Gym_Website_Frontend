@@ -28,18 +28,26 @@ const RecipeForm = () => {
         event.preventDefault()
         setErrorMessage("")
         setLoading(true)
+        const token = localStorage.getItem("token")
         try {
             const response = await fetch(`${import.meta.env.VITE_BASE_URL}/recipe/recipeDetails`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    ...(token ? { "Authorization": `Bearer ${token}` } : {})
                 }, credentials: "include",
                 body: JSON.stringify(details)
             })
 
             const data = await response.json()
+
+            if (response.status === 401) {
+                setLoading(false)
+                setErrorMessage("You have to login to access this feature.")
+                return
+            }
             if (!response.ok) {
-                throw new Error("Error in generating recipe" || data.message)
+                throw new Error(data.message || "Error in generating recipe")
             }
             setLoading(false)
             setRecipe(data.data)
@@ -73,18 +81,18 @@ const RecipeForm = () => {
                         <div className="flex flex-col text-white">
                             <Label htmlFor='goalIs' className="text-emerald-500">fitness goal</Label>
                             <select name="goal" id="goalIs" className='border rounded-sm px-2 py-1' value={details.goal} onChange={handleChange}>
-                                <option value="fat_loss" className="capitalize">Fat loss</option>
-                                <option value="muscle_gain" className="capitalize">muscle gain</option>
-                                <option value="maintenance" className="capitalize">maintenance</option>
+                                <option value="fat_loss" className="capitalize text-emerald-600 font-semibold">Fat loss</option>
+                                <option value="muscle_gain" className="capitalize text-emerald-600 font-semibold">muscle gain</option>
+                                <option value="maintenance" className="capitalize text-emerald-600 font-semibold">maintenance</option>
                             </select>
                         </div>
                         <div className="flex flex-col text-white">
                             <Label htmlFor='dietIs' className="text-emerald-500">diet type</Label>
                             <select name="dietType" id="dietIs" className='border rounded-sm px-2 py-1' value={details.dietType} onChange={handleChange}>
-                                <option value="vegetarian" className="capitalize">vegetarian</option>
-                                <option value="non_vegetarian" className="capitalize">non-vegetarian</option>
-                                <option value="vegan" className="capitalize">vegan</option>
-                                <option value="eggetarian" className="capitalize">eggetarian</option>
+                                <option value="vegetarian" className="capitalize text-emerald-600 font-semibold">vegetarian</option>
+                                <option value="non_vegetarian" className="capitalize text-emerald-600 font-semibold">non-vegetarian</option>
+                                <option value="vegan" className="capitalize text-emerald-600 font-semibold">vegan</option>
+                                <option value="eggetarian" className="capitalize text-emerald-600 font-semibold">eggetarian</option>
                             </select>
                         </div>
                         {/* </div> */}
@@ -100,11 +108,11 @@ const RecipeForm = () => {
                             <Label htmlFor='mealTypeIs' className="text-emerald-500">meal category</Label>
                             <select name="mealType" id="mealTypeIs" className='border rounded-sm px-2 py-1'
                                 value={details.mealType} onChange={handleChange}>
-                                <option value="breakfast" className="capitalize">breakfast</option>
-                                <option value="lunch" className="capitalize">lunch</option>
-                                <option value="dinner" className="capitalize">dinner</option>
-                                <option value="mid_morning" className="capitalize">mid morning</option>
-                                <option value="evening_snacks" className="capitalize">evening snacks</option>
+                                <option value="breakfast" className="capitalize text-emerald-600 font-semibold">breakfast</option>
+                                <option value="lunch" className="capitalize text-emerald-600 font-semibold">lunch</option>
+                                <option value="dinner" className="capitalize text-emerald-600 font-semibold">dinner</option>
+                                <option value="mid_morning" className="capitalize text-emerald-600 font-semibold">mid morning</option>
+                                <option value="evening_snacks" className="capitalize text-emerald-600 font-semibold">evening snacks</option>
                             </select>
                         </div>
                         {/* </div> */}

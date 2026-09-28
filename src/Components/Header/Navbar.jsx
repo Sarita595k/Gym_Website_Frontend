@@ -1,6 +1,24 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import Logo from "../../assets/logo-bg.png"
+import { useEffect, useState } from "react"
 const Navbar = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    useEffect(() => {
+        const token = localStorage.getItem("token")
+        setIsLoggedIn(!!token)
+    }, [location])
+
+    const handleLogout = () => {
+        localStorage.removeItem("token")
+        localStorage.removeItem("user-details")
+        setIsLoggedIn(false)
+        navigate("/login")
+    }
+
+
     return (
         // navbar started here 
         <div className="flex flex-col bg-emerald-50">
@@ -13,7 +31,17 @@ const Navbar = () => {
                 <Link to="/nutrition" className="hover:text-[#d76033]">Nutrition Plan</Link>
                 <Link to="/about" className="hover:text-[#d76033]">About us</Link>
                 {/* <Link to="/contact" className="hover:text-[#d76033]">Contact us</Link> */}
-                <Link to="/login" className="hover:text-[#d76033]">Login</Link>
+                {/* <Link to="/login" className="hover:text-[#d76033]">Login</Link> */}
+                {isLoggedIn ? (
+                    <button
+                        onClick={handleLogout}
+                        className="hover:text-[#d76033] cursor-pointer"
+                    >
+                        Logout
+                    </button>
+                ) : (
+                    <Link to="/login" className="hover:text-[#d76033]">Login</Link>
+                )}
             </div>
         </div>
     )

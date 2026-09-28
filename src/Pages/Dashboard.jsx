@@ -1,8 +1,9 @@
 import React from 'react'
+import AiNutrition from '../Components/NutritionPage/AiNutrition'
 
 const Dashboard = () => {
     return (
-        <div>Dashboard</div>
+        <div><AiNutrition /></div>
     )
 }
 
