@@ -6,6 +6,7 @@ const SwapForm = () => {
             <form>
                 <input type="text" name="" id="" />
                 <input type="text" name="" id="" />
+                <button type="submit"></button>
             </form>
         </div>
     )
