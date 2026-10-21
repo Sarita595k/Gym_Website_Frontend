@@ -42,27 +42,23 @@ const LoginForm = () => {
 
 
     return (
-        <div className=''>
-            <div className='border h-[45vw] p-10'>
+        <div className='text-center h-[25vw] w-full flex items-center justify-center'>
+            <div>
                 <h1 className='text-emerald-900 font-bold capitalize text-2xl'>enter your credentials</h1>
                 <p className='text-xs sm:text-sm text-gray-500 mt-1'>Welcome back. Enter your email and password to access your dashboard.</p>
                 {/* showing error message  */}
-                <p>{errorMessage}</p>
-                <form className="pt-10" onSubmit={handleSubmit}>
+                <p className='text-red-500 pt-5'>{errorMessage}</p>
+                <form className="pt-5" onSubmit={handleSubmit}>
                     <label htmlFor="emailIs">Enter your email</label><br />
-                    <input type="email" name="email" id="emailIs" className='border' value={details.email} onChange={handleChange} /><br />
+                    <input type="email" name="email" id="emailIs" className='border px-2 py-0.5' value={details.email} onChange={handleChange} /><br />
                     <label htmlFor="passwordIs">Enter your password</label><br />
-                    <input type="password" name="password" id="passwordIs" className='border' value={details.password} onChange={handleChange} /><br />
-                    <button type='submit'>Submit</button>
+                    <input type="password" name="password" id="passwordIs" className='border px-2 py-0.5' value={details.password} onChange={handleChange} /><br />
+                    <button type='submit' className='bg-emerald-900 text-white px-10 py-2 my-5 cursor-pointer
+                 hover:bg-[radial-gradient(at_top_left,#065f46,#000,#000)] hover:border-emerald-900 transition-transform duration-500 ease-in-out'>Submit</button>
                 </form>
-                <p>not joined our gym yet! no worries just click on <Link to="/register">sign up</Link> to joined our gym.</p>
+                <p className='capitalize pb-12'>not joined our gym yet! no worries just click on <Link to="/register" className='text-emerald-900 font-semibold hover:bg-emerald-700 hover:text-white'>sign up</Link> to joined our gym.</p>
             </div>
-            <div>
-                <video autoPlay playsInline muted loop>
-                    <source src={loginBanner} type="video/mp4" />
-                </video>
-            </div>
-        </div>
+        </div >
     )
 }
 

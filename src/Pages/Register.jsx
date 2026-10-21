@@ -6,7 +6,7 @@ import RegisterHeading from '../Components/Register/RegisterHeading'
 const Register = () => {
     return (
         <div>
-            <LoginBanner />
+            {/* <LoginBanner /> */}
             <RegisterHeading />
             <RegisterForm />
         </div>
